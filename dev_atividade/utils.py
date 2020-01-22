@@ -3,7 +3,7 @@ from models import Pessoas
 
 # Insere dados na tabela pessoa
 def insere_pessoas():
-    pessoa = Pessoas(nome="Paulo", idade=22)
+    pessoa = Pessoas(nome='Santos', idade=24)
     pessoa.save()
 
 
@@ -11,7 +11,7 @@ def insere_pessoas():
 def consulta_pessoas():
     pessoas = Pessoas.query.all()
     print(pessoas)
-    pessoa = Pessoas.query.filter_by(nome='Paulo').first()
+    pessoa = Pessoas.query.filter_by(nome='Marcos').first()
     print(pessoa.idade)
 
 
@@ -31,5 +31,5 @@ def exclui_pessoa():
 if __name__ == '__main__':
     # insere_pessoas()
     # altera_pessoa()
-    exclui_pessoa()
+    # exclui_pessoa()
     consulta_pessoas()
